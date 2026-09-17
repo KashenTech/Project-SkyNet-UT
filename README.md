@@ -1,4 +1,4 @@
 # Project Sky-Net
-Collaborators: Moustafa Kashen, 
+Collaborators: Moustafa Kashen, Josh Radke
 
 ## The Details of This Project:
