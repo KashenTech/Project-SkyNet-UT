@@ -1,0 +1,90 @@
+[
+  {
+    "event_id": "net-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "network.port_listening",
+    "category": "network",
+    "timestamp": "2026-10-04T14:30:00Z",
+    "observed_at": "2026-10-04T14:30:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "pid=1520",
+    "severity": "info",
+    "source": "/proc/net/tcp",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "local_addr": "0.0.0.0",
+      "local_port": 443,
+      "protocol": "tcp",
+      "pid": "1520",
+      "uid": 0
+    }
+  },
+  {
+    "event_id": "net-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "network.port_listening",
+    "category": "network",
+    "timestamp": "2026-10-04T14:30:15Z",
+    "observed_at": "2026-10-04T14:30:15Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "pid=1822",
+    "severity": "high",
+    "source": "/proc/net/tcp",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "local_addr": "0.0.0.0",
+      "local_port": 55555,
+      "protocol": "tcp",
+      "pid": "1822",
+      "uid": 1000
+    }
+  },
+  {
+    "event_id": "net-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "network.outbound_connection",
+    "category": "network",
+    "timestamp": "2026-10-04T14:31:00Z",
+    "observed_at": "2026-10-04T14:31:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "pid=1822",
+    "severity": "medium",
+    "source": "/proc/net/tcp",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "local_addr": "192.168.1.50",
+      "local_port": 49120,
+      "remote_addr": "198.51.100.77",
+      "remote_port": 4444,
+      "protocol": "tcp",
+      "pid": "1822",
+      "uid": 1000
+    }
+  },
+  {
+    "event_id": "net-0004-4000-8000-000000000004",
+    "schema_version": "1.0.0",
+    "event_type": "network.arp_change",
+    "category": "network",
+    "timestamp": "2026-10-04T14:32:00Z",
+    "observed_at": "2026-10-04T14:32:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "system",
+    "severity": "medium",
+    "source": "/proc/net/arp",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "device": "eth0",
+      "ip": "192.168.1.1",
+      "mac": "00:11:22:33:44:55"
+    }
+  }
+]

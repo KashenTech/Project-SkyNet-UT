@@ -1,0 +1,84 @@
+[
+  {
+    "rule_id": "brute_force_success",
+    "severity": "critical",
+    "confidence": 0.95,
+    "explanation": "Brute-force attack detected: 5 failed login attempts from IP 192.168.1.100 for user 'admin' followed by a successful login. This indicates a password was guessed.",
+    "first_seen": "2026-10-04T12:01:01Z",
+    "last_seen": "2026-10-04T12:01:12Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000002",
+      "00000000-0000-4000-8000-000000000003",
+      "00000000-0000-4000-8000-000000000004",
+      "00000000-0000-4000-8000-000000000005",
+      "00000000-0000-4000-8000-000000000006",
+      "00000000-0000-4000-8000-000000000007"
+    ]
+  },
+  {
+    "rule_id": "account_persistence",
+    "severity": "critical",
+    "confidence": 0.90,
+    "explanation": "Account persistence detected: User 'backdoor' was created and then immediately added to the 'sudo' group. This is a common attacker pattern for establishing persistent privileged access.",
+    "first_seen": "2026-10-04T12:02:00Z",
+    "last_seen": "2026-10-04T12:02:15Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000008",
+      "00000000-0000-4000-8000-000000000009"
+    ]
+  },
+  {
+    "rule_id": "usb_execution",
+    "severity": "critical",
+    "confidence": 0.85,
+    "explanation": "USB execution detected: An unknown USB device (0781:5581) was plugged in, mounted at '/media/usb0', and then a process was started from that path ('/media/usb0/payload.sh'). This may indicate USB-based malware delivery.",
+    "first_seen": "2026-10-04T12:03:00Z",
+    "last_seen": "2026-10-04T12:03:10Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000010",
+      "00000000-0000-4000-8000-000000000011",
+      "00000000-0000-4000-8000-000000000012"
+    ]
+  },
+  {
+    "rule_id": "web_to_shell",
+    "severity": "critical",
+    "confidence": 0.90,
+    "explanation": "Web-to-shell detected: Web server process 'nginx' (PID 1234) spawned a shell/interpreter 'bash'. This typically indicates a web shell or remote code execution exploit.",
+    "first_seen": "2026-10-04T12:04:00Z",
+    "last_seen": "2026-10-04T12:04:05Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000013",
+      "00000000-0000-4000-8000-000000000014"
+    ]
+  },
+  {
+    "rule_id": "download_to_run",
+    "severity": "high",
+    "confidence": 0.80,
+    "explanation": "Download-to-run detected: File '/home/user/Downloads/miner.elf' appeared in Downloads and was subsequently executed. This may indicate a drive-by download or phishing payload.",
+    "first_seen": "2026-10-04T12:05:00Z",
+    "last_seen": "2026-10-04T12:05:15Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000015",
+      "00000000-0000-4000-8000-000000000016"
+    ]
+  },
+  {
+    "rule_id": "log_tampering",
+    "severity": "critical",
+    "confidence": 0.85,
+    "explanation": "Log tampering detected near other suspicious activity: /var/log/auth.log was truncated. This may indicate an attacker covering their tracks.",
+    "first_seen": "2026-10-04T12:00:00Z",
+    "last_seen": "2026-10-04T12:05:45Z",
+    "related_event_ids": [
+      "00000000-0000-4000-8000-000000000008",
+      "00000000-0000-4000-8000-000000000009",
+      "00000000-0000-4000-8000-000000000012",
+      "00000000-0000-4000-8000-000000000014",
+      "00000000-0000-4000-8000-000000000016",
+      "00000000-0000-4000-8000-000000000017",
+      "00000000-0000-4000-8000-000000000018"
+    ]
+  }
+]

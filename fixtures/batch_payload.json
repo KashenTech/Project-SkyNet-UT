@@ -1,0 +1,142 @@
+{
+  "batch_id": "b6a8d504-749e-4e3e-bf63-8a9d19a28e35",
+  "sent_at": "2026-10-04T12:06:15Z",
+  "host": {
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "os": "Ubuntu 22.04.4 LTS",
+    "os_version": "22.04",
+    "kernel": "Linux version 5.15.0-105-generic (buildd@lcy02-amd64-004) #115-Ubuntu SMP",
+    "agent_version": "SkyNet Agent 1.0.0",
+    "started_at": "2026-10-04T12:00:00Z"
+  },
+  "events_count": 5,
+  "alerts_count": 1,
+  "events": [
+    {
+      "event_id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "schema_version": "1.0.0",
+      "event_type": "auth.login_failed",
+      "category": "auth",
+      "timestamp": "2026-10-04T12:01:01Z",
+      "observed_at": "2026-10-04T12:01:01Z",
+      "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+      "hostname": "prod-srv-01",
+      "actor": "192.168.1.100",
+      "severity": "low",
+      "source": "/var/log/auth.log",
+      "collector_status": "ok",
+      "related_event_ids": [],
+      "details": {
+        "auth_method": "password",
+        "ip": "192.168.1.100",
+        "port": 48922,
+        "user": "admin"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "schema_version": "1.0.0",
+      "event_type": "process.started",
+      "category": "process",
+      "timestamp": "2026-10-04T12:02:10Z",
+      "observed_at": "2026-10-04T12:02:10Z",
+      "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+      "hostname": "prod-srv-01",
+      "actor": "root",
+      "severity": "high",
+      "source": "/proc",
+      "collector_status": "ok",
+      "related_event_ids": [],
+      "details": {
+        "pid": 4092,
+        "ppid": 1,
+        "comm": "payload.sh",
+        "exe": "/media/usb0/payload.sh",
+        "cmdline": "/media/usb0/payload.sh",
+        "user": "root"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "schema_version": "1.0.0",
+      "event_type": "network.port_listening",
+      "category": "network",
+      "timestamp": "2026-10-04T12:03:00Z",
+      "observed_at": "2026-10-04T12:03:00Z",
+      "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+      "hostname": "prod-srv-01",
+      "actor": "pid=1234",
+      "severity": "info",
+      "source": "/proc/net/tcp",
+      "collector_status": "ok",
+      "related_event_ids": [],
+      "details": {
+        "local_addr": "0.0.0.0",
+        "local_port": 8080,
+        "protocol": "tcp",
+        "pid": "1234",
+        "uid": 1000
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "schema_version": "1.0.0",
+      "event_type": "file.modified",
+      "category": "file",
+      "timestamp": "2026-10-04T12:04:15Z",
+      "observed_at": "2026-10-04T12:04:15Z",
+      "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+      "hostname": "prod-srv-01",
+      "actor": "root",
+      "severity": "high",
+      "source": "/etc/shadow",
+      "collector_status": "ok",
+      "related_event_ids": [],
+      "details": {
+        "path": "/etc/shadow",
+        "action": "modified",
+        "size": 1842
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "schema_version": "1.0.0",
+      "event_type": "usb.device_connected",
+      "category": "usb",
+      "timestamp": "2026-10-04T12:05:00Z",
+      "observed_at": "2026-10-04T12:05:00Z",
+      "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+      "hostname": "prod-srv-01",
+      "actor": "device=0781:5581",
+      "severity": "high",
+      "source": "/sys/bus/usb/devices",
+      "collector_status": "ok",
+      "related_event_ids": [],
+      "details": {
+        "bus_id": "1-1.2",
+        "vendor_id": "0781",
+        "product_id": "5581",
+        "serial": "4C530001",
+        "manufacturer": "SanDisk",
+        "product": "Cruzer Blade",
+        "device_type": "storage"
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "c7d8e9f0-0001-4000-8000-000000000001",
+      "rule_id": "usb_execution",
+      "severity": "critical",
+      "confidence": 0.85,
+      "explanation": "USB execution detected: An unknown USB device (0781:5581) was plugged in, mounted at '/media/usb0', and then a process was started from that path ('/media/usb0/payload.sh'). This may indicate USB-based malware delivery.",
+      "first_seen": "2026-10-04T12:05:00Z",
+      "last_seen": "2026-10-04T12:05:10Z",
+      "related_event_ids": [
+        "a1b2c3d4-0005-4000-8000-000000000005",
+        "a1b2c3d4-0002-4000-8000-000000000002"
+      ]
+    }
+  ]
+}

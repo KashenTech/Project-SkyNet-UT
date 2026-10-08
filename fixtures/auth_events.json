@@ -1,0 +1,139 @@
+[
+  {
+    "event_id": "auth-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "auth.login_failed",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:10:01Z",
+    "observed_at": "2026-10-04T14:10:01Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "192.168.1.100",
+    "severity": "low",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "auth_method": "password",
+      "ip": "192.168.1.100",
+      "port": 48922,
+      "user": "admin"
+    }
+  },
+  {
+    "event_id": "auth-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "auth.login_success",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:10:15Z",
+    "observed_at": "2026-10-04T14:10:15Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "192.168.1.100",
+    "severity": "info",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "auth_method": "publickey",
+      "ip": "192.168.1.100",
+      "port": 48930,
+      "user": "deploy"
+    }
+  },
+  {
+    "event_id": "auth-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "auth.root_login",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:11:00Z",
+    "observed_at": "2026-10-04T14:11:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "10.0.0.5",
+    "severity": "high",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "auth_method": "password",
+      "ip": "10.0.0.5",
+      "port": 51220,
+      "user": "root"
+    }
+  },
+  {
+    "event_id": "auth-0004-4000-8000-000000000004",
+    "schema_version": "1.0.0",
+    "event_type": "auth.sudo",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:12:30Z",
+    "observed_at": "2026-10-04T14:12:30Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "sysadmin",
+    "severity": "medium",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "command": "/bin/systemctl restart nginx",
+      "user": "sysadmin"
+    }
+  },
+  {
+    "event_id": "auth-0005-4000-8000-000000000005",
+    "schema_version": "1.0.0",
+    "event_type": "auth.user_created",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:15:00Z",
+    "observed_at": "2026-10-04T14:15:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "root",
+    "severity": "medium",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "account": "svc_monitor"
+    }
+  },
+  {
+    "event_id": "auth-0006-4000-8000-000000000006",
+    "schema_version": "1.0.0",
+    "event_type": "auth.group_change",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:15:10Z",
+    "observed_at": "2026-10-04T14:15:10Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "root",
+    "severity": "high",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "account": "svc_monitor",
+      "group": "sudo"
+    }
+  },
+  {
+    "event_id": "auth-0007-4000-8000-000000000007",
+    "schema_version": "1.0.0",
+    "event_type": "auth.password_changed",
+    "category": "auth",
+    "timestamp": "2026-10-04T14:16:00Z",
+    "observed_at": "2026-10-04T14:16:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "root",
+    "severity": "medium",
+    "source": "/var/log/auth.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "user": "svc_monitor"
+    }
+  }
+]

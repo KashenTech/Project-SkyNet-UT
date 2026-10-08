@@ -1,0 +1,9 @@
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/skynet_core.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/skynet-agent.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/test_schema.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/test_correlator.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/test_fixture_replay.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/test_deep_scan.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/test.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Charlie/Desktop/SkyNet/build/CMakeFiles/rebuild_cache.dir
