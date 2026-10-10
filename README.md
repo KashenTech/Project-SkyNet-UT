@@ -125,6 +125,12 @@ The correlation engine maintains state across a 5-minute sliding window to ident
 - CMake 3.16+
 - POSIX threads (`pthread`)
 
+### Install CMake and Build Essentials
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential cmake
+```
+
 ### Compilation
 
 ```bash
