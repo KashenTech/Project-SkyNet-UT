@@ -1,5 +1,0 @@
-test_schema 4 0.00202967
-test_correlator 4 0.00130132
-test_fixture_replay 3 0.00285979
-test_deep_scan 2 0.013816
----

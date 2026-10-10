@@ -1,0 +1,31 @@
+# Build artifacts
+/build/
+/CMakeFiles/
+/cmake-build-*/
+CMakeCache.txt
+CTestTestfile.cmake
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Compiled binaries and object files
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.out
+*.exe
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local temp/log files
+*.log
+*.tmp
+*.bak
+.DS_Store

@@ -1,5 +1,6 @@
-# SkyNet: Linux Endpoint Security Agent
+# Project SkyNet: Creating a Linux Endpoint Security Agent
 
+Application Name: BeneFacto
 Version: 1.0.0  
 Language: C++17  
 Build System: CMake 3.16+  
@@ -9,7 +10,7 @@ Target Platform: Linux (Ubuntu 20.04+, Debian 11+, RHEL/Rocky 8+)
 
 ## 1. Overview and Architecture
 
-SkyNet is a lightweight Linux endpoint security agent designed to capture system telemetry, normalize observations into a canonical JSON schema, run real-time local correlation rules for threat detection, buffer events with disk spooling during backend outages, and stream batched payloads to security ingestion backends.
+BeneFacto is a Linux endpoint security agent designed with HIDS/EDR detection logic used to capture system telemetry, normalize observations into a canonical JSON schema, run real-time local correlation rules for threat detection, buffer events with disk spooling during backend outages, and stream batched payloads to security ingestion backends.
 
 ### Architecture Pipeline
 
@@ -123,6 +124,12 @@ The correlation engine maintains state across a 5-minute sliding window to ident
 - C++17 compiler (GCC 9+ or Clang 10+)
 - CMake 3.16+
 - POSIX threads (`pthread`)
+
+### Install CMake and Build Essentials
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential cmake
+```
 
 ### Compilation
 
