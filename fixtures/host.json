@@ -1,0 +1,9 @@
+{
+  "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+  "hostname": "prod-srv-01",
+  "os": "Ubuntu 22.04.4 LTS",
+  "os_version": "22.04",
+  "kernel": "Linux version 5.15.0-105-generic (buildd@lcy02-amd64-004) #115-Ubuntu SMP",
+  "agent_version": "SkyNet Agent 1.0.0",
+  "started_at": "2026-10-04T12:00:00Z"
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "event_id": "proc-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "process.started",
+    "category": "process",
+    "timestamp": "2026-10-04T14:20:00Z",
+    "observed_at": "2026-10-04T14:20:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "www-data",
+    "severity": "info",
+    "source": "/proc",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "pid": 1520,
+      "ppid": 1,
+      "comm": "nginx",
+      "exe": "/usr/sbin/nginx",
+      "cmdline": "/usr/sbin/nginx -g daemon on;",
+      "user": "www-data"
+    }
+  },
+  {
+    "event_id": "proc-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "process.started",
+    "category": "process",
+    "timestamp": "2026-10-04T14:20:05Z",
+    "observed_at": "2026-10-04T14:20:05Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "www-data",
+    "severity": "high",
+    "source": "/proc",
+    "collector_status": "ok",
+    "related_event_ids": [
+      "proc-0001-4000-8000-000000000001"
+    ],
+    "details": {
+      "pid": 1590,
+      "ppid": 1520,
+      "comm": "bash",
+      "exe": "/bin/bash",
+      "cmdline": "/bin/bash -i",
+      "user": "www-data"
+    }
+  },
+  {
+    "event_id": "proc-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "process.started",
+    "category": "process",
+    "timestamp": "2026-10-04T14:21:00Z",
+    "observed_at": "2026-10-04T14:21:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "nobody",
+    "severity": "high",
+    "source": "/proc",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "pid": 1822,
+      "ppid": 1,
+      "comm": ".xmr",
+      "exe": "/tmp/.xmr",
+      "cmdline": "/tmp/.xmr -o pool.supportxmr.com:3333",
+      "user": "nobody",
+      "suspicious_path": true
+    }
+  },
+  {
+    "event_id": "proc-0004-4000-8000-000000000004",
+    "schema_version": "1.0.0",
+    "event_type": "process.high_resource",
+    "category": "process",
+    "timestamp": "2026-10-04T14:21:30Z",
+    "observed_at": "2026-10-04T14:21:30Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "nobody",
+    "severity": "medium",
+    "source": "/proc",
+    "collector_status": "ok",
+    "related_event_ids": [
+      "proc-0003-4000-8000-000000000003"
+    ],
+    "details": {
+      "pid": 1822,
+      "comm": ".xmr",
+      "cpu_user_ticks": 45000,
+      "cpu_system_ticks": 12000,
+      "memory_rss_bytes": 1073741824
+    }
+  },
+  {
+    "event_id": "proc-0005-4000-8000-000000000005",
+    "schema_version": "1.0.0",
+    "event_type": "process.stopped",
+    "category": "process",
+    "timestamp": "2026-10-04T14:25:00Z",
+    "observed_at": "2026-10-04T14:25:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "pid=1822",
+    "severity": "info",
+    "source": "/proc",
+    "collector_status": "ok",
+    "related_event_ids": [
+      "proc-0003-4000-8000-000000000003"
+    ],
+    "details": {
+      "pid": 1822,
+      "comm": ".xmr"
+    }
+  }
+]

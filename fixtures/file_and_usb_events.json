@@ -1,0 +1,106 @@
+[
+  {
+    "event_id": "file-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "file.created",
+    "category": "file",
+    "timestamp": "2026-10-04T14:40:00Z",
+    "observed_at": "2026-10-04T14:40:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "root",
+    "severity": "high",
+    "source": "/etc",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "action": "created",
+      "path": "/etc/cron.d/persistence",
+      "size": 128
+    }
+  },
+  {
+    "event_id": "file-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "file.modified",
+    "category": "file",
+    "timestamp": "2026-10-04T14:40:15Z",
+    "observed_at": "2026-10-04T14:40:15Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "root",
+    "severity": "high",
+    "source": "/etc/sudoers",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "action": "modified",
+      "path": "/etc/sudoers",
+      "size": 1780
+    }
+  },
+  {
+    "event_id": "usb-0001-4000-8000-000000000001",
+    "schema_version": "1.0.0",
+    "event_type": "usb.device_connected",
+    "category": "usb",
+    "timestamp": "2026-10-04T14:45:00Z",
+    "observed_at": "2026-10-04T14:45:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "device=0951:1666",
+    "severity": "high",
+    "source": "/sys/bus/usb/devices",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "bus_id": "2-1.1",
+      "device_type": "storage",
+      "manufacturer": "Kingston",
+      "product": "DataTraveler 3.0",
+      "product_id": "1666",
+      "serial": "0014D118BC",
+      "vendor_id": "0951"
+    }
+  },
+  {
+    "event_id": "usb-0002-4000-8000-000000000002",
+    "schema_version": "1.0.0",
+    "event_type": "usb.drive_mounted",
+    "category": "usb",
+    "timestamp": "2026-10-04T14:45:05Z",
+    "observed_at": "2026-10-04T14:45:05Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "system",
+    "severity": "low",
+    "source": "/proc/mounts",
+    "collector_status": "ok",
+    "related_event_ids": [
+      "usb-0001-4000-8000-000000000001"
+    ],
+    "details": {
+      "device": "/dev/sdc1",
+      "fstype": "ext4",
+      "mount_point": "/media/removable"
+    }
+  },
+  {
+    "event_id": "usb-0003-4000-8000-000000000003",
+    "schema_version": "1.0.0",
+    "event_type": "usb.device_disconnected",
+    "category": "usb",
+    "timestamp": "2026-10-04T14:50:00Z",
+    "observed_at": "2026-10-04T14:50:00Z",
+    "host_id": "be7a4e61-9c88-4fb0-a29d-43cf1812e911",
+    "hostname": "prod-srv-01",
+    "actor": "device=2-1.1",
+    "severity": "info",
+    "source": "/sys/bus/usb/devices",
+    "collector_status": "ok",
+    "related_event_ids": [],
+    "details": {
+      "bus_id": "2-1.1"
+    }
+  }
+]

@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/skynet-agent.dir/src/main.cpp.o" -o skynet-agent  libskynet_core.a 
