@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_correlator.dir/tests/test_correlator.cpp.o CMakeFiles/test_correlator.dir/src/correlator.cpp.o -o test_correlator 

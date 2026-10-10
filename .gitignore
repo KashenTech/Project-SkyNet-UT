@@ -1,6 +1,7 @@
 # Build artifacts
-build/
-CMakeFiles/
+/build/
+/CMakeFiles/
+/cmake-build-*/
 CMakeCache.txt
 CTestTestfile.cmake
 cmake_install.cmake
@@ -10,12 +11,12 @@ compile_commands.json
 # Compiled binaries and object files
 *.o
 *.obj
-*.so
 *.a
+*.so
+*.dylib
+*.dll
 *.out
 *.exe
-*.dll
-*.dylib
 
 # IDE/editor files
 .vscode/
@@ -28,7 +29,3 @@ compile_commands.json
 *.tmp
 *.bak
 .DS_Store
-
-# Generated local reports
-scan_report.json
-*.jsonl
